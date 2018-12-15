@@ -10,7 +10,7 @@ jobs:
     steps:
     - run: "echo 'testing building...'"
     - greeting/hello:
-      username: na0ya
+        username: na0ya
 
 workflows:
   main:
