@@ -1,14 +1,19 @@
 version: 2.1
 
+orbs:
+  greeting: na0ya/greet-test@0.0.1
+
 jobs:
   build:
     docker:
-    - image: bash
+    - image: circleci/openjdk:latest
     steps:
     - run: "echo 'testing building...'"
-
+    - greeting/hello:
+      username: na0ya
 
 workflows:
   main:
     jobs:
-    - build
+      - build
+    
